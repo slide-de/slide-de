@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>JS基础介绍</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+<div class="slides">
+    <section>
+        <h2>js基础介绍<br>
+            <br>
+            <br>
+            <br>
+        </h2>
+<pre>{
+    "name": "李永剑",
+    "nickname": "耗子",
+    "weibo":"@前端的那点破事"
+<span style="font-family: monospace;">}</span>    </pre>
+    <br>
+</section>
+<section>
+<pre><font color="#ffffff"><span>“1994年，网景公司（Netscape）发布了Navigator浏览器0.9版。这是历史上第一个比较成熟的网络浏览器，轰动一时。但是，这个版本的浏览器只能用来浏览，不具备与访问者互动的能力。......网景公司急需一种网页脚本语言，使得浏览器可以与网页互动。” </span></font><br></pre>
+<img src="http://cms.csdnimg.cn/articlev1/uploads/allimg/110627/10305Ga9-0.jpg">
+<br>
+</section>
+<section>
+    <h2>
+<img src="http://cms.csdnimg.cn/articlev1/uploads/allimg/110627/10305K523-2.jpg">
+    <br>
+</h2>
+<div>
+<pre><code><div style="text-align: center;"><span style="font-family: monospace;">教主</span></div>
+<div style="text-align: center;"><span style="font-family: monospace;">Brendan Eich</span></div></code></pre>
+</div>
+<div>
+<br>
+</div>
+<div>
+<div style="text-align: left; ">
+<font color="#333333">
+    <span style="font-size: 14.410086631774902px;">
+        <div>
+            <br>
+            </div>
+<div>Brendan Eich</div>
+        </span>
+    </font>
+</div>
+<div style="text-align: left; ">
+<font color="#333333">
+    <span style="font-size: 14.410086631774902px;">Brendan Eich</span>
+</font>
+</div>
+</div>
+</section>
+<section>
+<h2>
+<img src="http://www.techcn.com.cn/uploads/200906/1244480678L3Pki3Pn.jpg">
+<img src="http://img11.360buyimg.com/n1/g13/M02/04/0E/rBEhVFHbZw0IAAAAAALFxgN_LSsAAA3fgLESAwAAsXe559.jpg" style="width: 502.39327550728876px; height: 504.3837600351351px; max-height: none; max-width: none;">
+<br>
+</h2>
+<div>
+<pre><code><div style="text-align: center;"><span style="font-family: monospace;">大护法</span></div>
+<div style="text-align: center;"><span style="font-family: monospace;">Douglas Crockford</span></div></code></pre>
+</div>
+<div>
+<div style="text-align: left; ">
+<font color="#333333">
+    <span style="font-size: 14.410086631774902px;">
+        <div>
+            <br>
+            </div>
+<div>
+<br>
+</div>
+</span>
+</font>
+</div>
+
+</div>
+</section>
+<section>
+<pre>内联脚本
+&lt;script&gt;
+     alert('hello world');
+&lt;/script&gt;</pre>
+<pre>外联文件
+&lt;script src="hello.js"&gt;&lt;/script&gt;</pre>
+<pre>行内脚本
+&lt;div onclick="alert('hello world')"&gt;&lt;/div&gt;</pre>
+<pre>伪协议
+&lt;a href="javascript:alert('hello world');"&gt;&lt;/a&gt;</pre>
+<br></section><section><h2>基本语法</h2>
+<pre><span style="font-size: 19.213449478149414px; white-space: pre-wrap;"><font face="monospace">1.双引号与单引号无差别
+2.分号不敏感
+3.缩进空格不敏感
+4.大小写敏感
+5.变量使用前需声明
+6.弱类型</font></span></pre>
+<div style="text-align: left;">
+<span style="font-size: 19.213449478149414px; white-space: pre-wrap;">
+    <font face="monospace">
+        <br>
+    </font>
+</span>
+</div>
+<br>
+</section>
+<section>
+    <h3>数据类型</h3>
+<pre style="font-style: normal; font-variant: normal; width: 861.8282470703125px;">    <ol>
+<li>Undefined</li>
+<li>Null<span>        </span>
+</li>
+<li>Boolean<span>        </span>
+</li>
+<li>
+    <span>Number        </span>
+</li>
+<li>String<span>        </span>
+</li>
+<li>Object</li>
+    </ol>
+</pre>
+<br>
+</section>
+<section>
+    <div>
+        <br>
+</div>
+<pre>null == undefined
+<span style="font-family: monospace;">null !== undefined</span></pre>
+<pre>null表示空指针
+undefined表示未定义<br></pre>
+<pre>任何申明了却没有赋值的变量默认值就是undefined
+任何时候不会显式地将变量赋值成undefined</pre>
+<br></section><section><h2>Boolean</h2>
+<pre>true  false
+
+undefined null "" 0 false 都是假值，其它都为真值<br>    </pre>
+<br>
+</section>
+<section>
+<h2>Number</h2>
+<pre>数字只有一种类型 number，不区分int float double
+遵守 IEEE 754规范 0.1+0.2 !== 0.3
+
+</pre>
+<pre><br></pre>
+<pre>一些特殊值
+
+NaN
+Infinity
+-Infinity
+Math.PI
+Math.E
+Math.LOG10E
+Math.LOG2E
+
+
+</pre>
+<br></section><section><h2>string</h2>
+<pre>使用+连字符
+<br>不区分单双引号</pre>
+<pre> var string = 'hello world';</pre>
+<br></section><section><h2>Object</h2>
+<pre>Object<br>Array<br>Function</pre>
+<pre>{
+    ‘key’: value
+}</pre>
+<pre>[0, 1, 2, 3]</pre>
+<pre>function foo() {}</pre>
+<br></section><section><h2>对象的访问方法</h2>
+<pre>1.点访问 <br>2.方括号访问</pre>
+<pre>var a = {
+    hello:1
+}
+var foo = 'hello';
+
+a.hello;
+a['hello'];
+a['he' + 'llo'];
+a[foo];
+
+两者没有区别，第二种更灵活</pre>
+<br></section><section><h2>JSON</h2>
+<pre>json是对象字面量的一个子集,语法上有严格的要求
+它的本质是字符串
+json 的key必须以双引号包裹，value只能为Boolen Null&nbsp;<span style="font-family: monospace;">String </span><span style="font-family: monospace;">Number Object（Array) ,不能是Function,字符串必须以双引号包裹</span></pre>
+<pre><span style="font-family: monospace;">{
+    "key1": true,
+    "key2": "string"
+    ...
+}</span></pre>
+<pre>ecma5开始支持JSON.parse与JSON.stringify，将js对象与json字符串相互转换
+<div style="text-align: left;"><span style="font-family: monospace;">php5.2后有</span><span style="font-family: monospace; text-align: center;">json_decode与</span><span style="font-family: monospace; text-align: center;">json_</span><span style="font-family: monospace; text-align: center;">encode函数处理json字符串与php数组的相互转换</span><span style="font-family: monospace;"> </span></div></pre>
+<br>
+</section>
+<section>
+<h2>Array</h2>
+<pre>数组是一个有序的成员集合
+</pre>
+<pre>var arr = [0, 1, 2];
+var arr = new Array(0, 1, 2);//任何时候不建议使用
+
+shift push  ---&gt; 队列
+shift unshift --&gt; 栈<br>
+Array的长度可以动态伸缩
+
+var arr1 = [];
+for (var i = 0; i &lt; 100; ++i) {
+    arr1.push(i);
+}
+arr1.length = 10;
+<br></pre>
+<pre>var arr2 = [1, 2, 3, 4, 5, 6];
+for (var i = 0, len = arr2.length; i &lt; len; ++i) { //遍历数组的优化
+。。。。
+}
+
+arr2.forEach(function (item, index) {
+
+})
+
+</pre>
+</section><section><h2>Function</h2>
+
+
+<pre>function是js中的一等公民，别的都是数据，function是操作，function也可以存储数据
+</pre>
+<pre>function foo() {}         // 函数声明
+var bar = function () {}; // 函数表达式
+(function () {})();       // 立即执行的匿名函数</pre>
+<pre>函数声明是声明一个函数
+
+函数表达式是将一个匿名函数赋值给一个变量
+函数声明与函数表达式大部分时候没有区别，但发生的时机不一样
+
+立即执行的匿名函数是将一个不具名的函数立即执行（稍后重点讲）
+
+</pre>
+
+<br><br></section><section><h2>代码风格</h2><pre>1.function的左括号不另起到下一行
+function foo() {
+    ...
+}
+
+2.构造函数首字母大写 使用CamelCase大驼峰方式命名</pre><br></section><section><h2>作用域</h2><pre>js中只有全局作用域和函数作用域
+在函数体外声明的变量、函数都会成为全局对象
+在函数体内通过隐式赋值或显式地声明为window对象的成员将成为全局对象
+
+var foo = 'string';
+function bar () {
+
+}
+
+function bar2() {
+    var a = 'local';
+    b = 'global'; // 隐患
+    window.c = 'global';
+}
+
+function bar3() {
+   var a = b = 1;
+   var c = 1,
+       d = 2,
+       e = 3    //雅蠛蝶，丢了个逗号!
+       f = 4;
+}
+
+</pre><br></section><section><h2>js为何没有块作用域？<br>
+    <img src="http://img.kejixun.com/2013/0703/20130703113940224.jpg">
+</h2>
+ <p>
+<span style="text-align: left; white-space: pre-wrap;">
+    <font style="font-size: 32px;">嫑提了，当年网景的老大催着赶工，只花了10天时间设计js的解析器，作用域复杂了尼马搞不定，人艰不拆啊!!!啊!!!啊!!!</font>
+
+</span></p>
+
+</section><section><pre>(function () {
+    // 此处将构建一个函数作用域，用此模拟块级作用域
+})();</pre><pre>    <span style="font-family: monospace;">模块写法</span>
+(function (exports) {
+    'use strict';
+    var jQuery = function () {
+      // 此处省略1万行
+    }
+
+    exports.$ = exports.jQuery = jQuery;
+})(window);
+
+
+</pre>
+    <br>
+</section>
+<section>
+    <h2>闭包</h2>
+<pre>var o = (function () {
+    var a = 0;
+    function get() {
+        return a;
+    }
+    function set (n) {
+        a = n;
+    }
+
+    return {
+        get: get,
+        set: set
+    }
+})();
+
+o.get();  // 0;
+o.set(5);
+o.get();  // 5</pre><br></section><section><h2>继承</h2><pre>js中没有经典的Class类，js通过prototype的原型方式继承
+</pre><pre>function Animal (legs, eyes) {
+    this.legs = legs || 4;
+    this.eyes = eyes || 2;
+}
+Animal.prototype.say = function () {
+     alert('woooooooo');
+}
+
+var animal = new Animal();
+animal.say(); // '<span style="font-family: monospace;">woooooooo</span><span style="font-family: monospace;">'
+
+var Rat = function () {};
+Rat.prototype = new Animal();
+Rat.prototype.say = function(){
+    alert('吱吱');
+}
+var rat = new Rat();
+rat.say(); // 吱吱
+rat.legs   // 4
+rat.eyes   // 2</span></pre>
+<br>
+</section>
+<section>
+    <h2>推荐阅读</h2>
+    <p>
+</p>
+<div style="text-align: left;">
+    <a href="http://book.douban.com/subject/3590768/">http://book.douban.com/subject/3590768/</a>
+</div>
+<div style="text-align: left;">
+    <a href="http://book.douban.com/subject/2228378/">http://book.douban.com/subject/2228378/</a>
+    <a href="http://bonsaiden.github.io/JavaScript-Garden/zh/">
+        <br>
+    </a>
+    <a href="http://bonsaiden.github.io/JavaScript-Garden/zh/">http://bonsaiden.github.io/JavaScript-Garden/zh/</a>
+    <br>
+    <br>
+</div>
+<p>
+</p>
+</section>
+</div>
+
+
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
